@@ -1,9 +1,11 @@
 "use client"
 
 import type React from "react"
-
+import { Link } from "react-router"
 import { useState } from "react"
 import { Star, Users, BarChart3, Shield, ArrowRight, CheckCircle } from "lucide-react"
+
+
 
 export default function InstructorEvaluationLanding() {
   const [email, setEmail] = useState("")
@@ -38,9 +40,11 @@ export default function InstructorEvaluationLanding() {
               <a href="#contact" className="text-gray-600 hover:text-[#11491b] font-medium transition-colors">
                 Contact
               </a>
-              <button className="bg-[#11491b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#0d3614] transition-colors">
-                Sign In
-              </button>
+              <Link to="./components/login-form">
+                <button className="bg-[#11491b] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#0d3614] transition-colors">
+                  Sign In
+                </button>
+              </Link>
             </nav>
           </div>
         </div>
@@ -53,7 +57,7 @@ export default function InstructorEvaluationLanding() {
             <div className="space-y-8">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 bg-[#e6b012]/10 text-[#e6b012] px-4 py-2 rounded-full text-sm font-semibold">
-                  <Star className="w-4 h-4" />
+                  <Star className="w-4 h-4 animate-spin" />
                   AI-Powered Feedback System
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-bold text-[#11491b] leading-tight text-balance">

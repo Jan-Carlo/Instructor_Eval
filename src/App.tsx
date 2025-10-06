@@ -1,13 +1,19 @@
 import { useState } from 'react'
 import './App.css'
-import LandingPage from "./assets/Pages/landpage";
+import LandingPage from "./pages/landpage";
+
+import { Route, Routes } from "react-router";
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div>
-      <LandingPage />
+      <div>
+        <Routes>
+         <Route path = "/" element = {<LandingPage/>}/>
+        </Routes>
+      </div>
     </div>
   )
 }
